@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nakima Mates | Mates Artesanales de Calidad Premium</title>
+  <meta name="description" content="Catálogo exclusivo de mates artesanales: imperiales, torpedos y modelos Roma en alpaca, bronce y cuero vacuno genuino.">
+  
+  <!-- Fallback online Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar-wrapper" id="main-header">
+    <nav class="navbar container">
+      <!-- Logo a la izquierda -->
+      <a href="#home" class="navbar-logo" aria-label="Nakima Mates Inicio">
+        <img src="assets/images/Logo Nakima Mates con mate.png" alt="Logo Nakima Mates" class="logo-img">
+      </a>
+
+      <!-- Botón Hamburguesa para Mobile -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- Botones Principales a la derecha -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-btn active">Home</a></li>
+        <li><a href="#catalogo" class="nav-btn">Catálogo</a></li>
+        <li><a href="#combos" class="nav-btn">Combos</a></li>
+        <li><a href="#contactanos" class="nav-btn">Contactanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION (100% de la pantalla) ================= -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-content container">
+        <span class="hero-badge">Tradición & Calidad Artesanal</span>
+        <h1 class="hero-title">El Ritual del Mate,<br><span>Elevado al Arte</span></h1>
+        <p class="hero-subtitle">Mates imperiales y torpedos forrados en cuero genuino, con virolas cinceladas a mano en alpaca y bronce. Piezas únicas hechas para acompañarte toda la vida.</p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn btn-hero">
+            <span>Ver Catálogo Completo</span>
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="https://wa.me/5493794062142?text=¡Hola!%20Quisiera%20recibir%20más%20información%20sobre%20los%20mates%20Nakima." target="_blank" rel="noopener noreferrer" class="btn btn-hero-secondary">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Pedir por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+      <a href="#catalogo" class="scroll-down-indicator" aria-label="Ir al catálogo">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ================= SECCIÓN CATÁLOGO ================= -->
+    <section class="catalog-section" id="catalogo">
+      <div class="container">
+        <!-- Encabezado de sección -->
+        <div class="section-header">
+          <span class="section-tag">Colección Exclusiva</span>
+          <h2 class="section-title">Catálogo de Mates</h2>
+          <div class="section-divider">
+            <span class="divider-line"></span>
+            <i class="fa-solid fa-leaf divider-icon"></i>
+            <span class="divider-line"></span>
+          </div>
+          <p class="section-description">
+            Explorá cada uno de nuestros modelos seleccionados. Cada mate es una pieza única, hecha a mano con calabaza prémium, virolas artesanales y bases reforzadas. Hacé clic en <strong>"Ver más"</strong> para conocer los detalles y realizar tu pedido.
+          </p>
+        </div>
+
+        <!-- Filtros Rápidos (Sección base y bolita removida, se agrega Combos, Bombillas e Insumos) -->
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">Todos los Productos</button>
+          <button class="filter-btn" data-filter="imperial">Imperiales</button>
+          <button class="filter-btn" data-filter="torpedo">Torpedos</button>
+          <button class="filter-btn filter-btn-criollo" data-filter="criollo">
+            <i class="fa-solid fa-leaf"></i> Mates Criollos
+          </button>
+          <button class="filter-btn" data-filter="roma">Roma</button>
+          <button class="filter-btn filter-btn-combos" data-filter="combos">
+            <i class="fa-solid fa-boxes-packing"></i> Combos
+          </button>
+          <button class="filter-btn" data-filter="bombillas">Bombillas</button>
+          <button class="filter-btn" data-filter="insumos">Porongos / Materia Prima</button>
+        </div>
+        
+        <!-- Grid de Tarjetas de Mates -->
+        <div class="catalog-grid" id="catalogGrid">
+          <!-- Las tarjetas se generan dinámicamente o se precargan vía JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN COMBOS (Nueva Sección Solicitada) ================= -->
+    <section class="combos-section" id="combos">
+      <div class="container">
+        <!-- Encabezado de la Sección Combos -->
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-boxes-packing"></i> Oportunidad Mayorista</span>
+          <h2 class="section-title">Sección Combos</h2>
+          <div class="section-divider">
+            <span class="divider-line"></span>
+            <i class="fa-solid fa-gift divider-icon"></i>
+            <span class="divider-line"></span>
+          </div>
+          <p class="section-description">
+            Paquetes armados con precios especiales directo de fábrica para emprendedores, comercios y reventa con la mayor ganancia.
+          </p>
+        </div>
+
+        <!-- Tarjeta Principal del Combo Emprendedor -->
+        <div class="combo-hero-card">
+          <div class="combo-hero-image-box" onclick="openModal('combo-emprendedor')">
+            <img src="assets/images/combo%20emprendedor.jpeg" alt="¡Combo Emprendedor! Nakima Mates" class="combo-hero-img">
+            <span class="combo-badge-top">¡Todo Incluido!</span>
+          </div>
+
+          <div class="combo-hero-content">
+            <span class="combo-pretitle">Nakima Mates • Fabricantes Directos</span>
+            <h3 class="combo-title">¡Combo Emprendedor!</h3>
+            <p class="combo-desc">
+              El kit ideal para empezar tu negocio de mates hoy mismo. Una selección de nuestros modelos más vendidos y con máxima rotación:
+            </p>
+
+            <div class="combo-items-list">
+              <div class="combo-item-row">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>2 Mates Torpedo</strong> (cuero vacuno seleccionado y virolas labradas)</span>
+              </div>
+              <div class="combo-item-row">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>3 Mates Imperiales</strong> (calabazas gruesas y cincelados de alpaca/acero)</span>
+              </div>
+              <div class="combo-item-row">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>3 Mates Criollos</strong> (calabazas porongo con soporte tradicional)</span>
+              </div>
+              <div class="combo-item-row">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>5 Bombillas de Alpaca</strong> (calidad premium de obsequio)</span>
+              </div>
+            </div>
+
+            <div class="combo-price-box">
+              <span class="combo-price-label">Precio Especial Todo Por:</span>
+              <div class="combo-price-amount">$120.000</div>
+              <span class="combo-price-sub"><i class="fa-solid fa-truck-fast"></i> Venta por mayor y menor • Envíos a todo el país</span>
+            </div>
+
+            <div class="combo-actions">
+              <a href="https://wa.me/5493794062142?text=¡Hola!%20Vengo%20de%20la%20página%20web%20de%20Nakima%20Mates.%20Quiero%20pedir%20el%20*Combo%20Emprendedor*%20de%20$120.000%20(2%20Torpedos%20+%203%20Imperiales%20+%203%20Criollos%20+%205%20Bombillas).%20¿Cómo%20coordinamos%20el%20pago%20y%20envío?" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-combo-pedir">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Pedir Combo por WhatsApp ($120.000)</span>
+              </a>
+              <button type="button" class="btn btn-combo-details" onclick="openModal('combo-emprendedor')">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>Ver en Grande</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN CONTACTANOS (Separada con #728E6D) ================= -->
+    <section class="contact-section" id="contactanos">
+      <div class="contact-decor-top"></div>
+      <div class="container contact-container">
+        <div class="contact-card">
+          <div class="contact-icon-bubble">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          
+          <!-- Requisito exacto del usuario -->
+          <h2 class="contact-title">¿Te quedaste con alguna duda?</h2>
+          <p class="contact-subtitle">Escribinos a nuestro contacto de whatsapp</p>
+          
+          <div class="contact-phone-badge">
+            <i class="fa-solid fa-phone"></i>
+            <span>+54 9 3794 06-2142</span>
+          </div>
+
+          <a href="https://wa.me/5493794062142?text=¡Hola!%20Tengo%20una%20consulta%20sobre%20los%20mates%20Nakima." 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-whatsapp-direct" 
+             id="contactWhatsappBtn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Enviar mensaje directo</span>
+          </a>
+
+          <div class="contact-features">
+            <div class="contact-feature-item">
+              <i class="fa-solid fa-truck-fast"></i>
+              <span>Envíos a todo el país</span>
+            </div>
+            <div class="contact-feature-item">
+              <i class="fa-solid fa-gem"></i>
+              <span>Garantía de calidad artesanal</span>
+            </div>
+            <div class="contact-feature-item">
+              <i class="fa-solid fa-comments"></i>
+              <span>Atención personalizada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="assets/images/Logo Nakima Mates con mate.png" alt="Nakima Mates" class="footer-logo">
+        <p class="footer-text">Mates seleccionados de primera línea para los verdaderos amantes de nuestra costumbre.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4 class="footer-heading">Navegación</h4>
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#combos">Combos</a></li>
+          <li><a href="#contactanos">Contactanos</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-info">
+        <h4 class="footer-heading">Contacto Oficial</h4>
+        <p><i class="fa-brands fa-whatsapp"></i> +54 9 3794 06-2142</p>
+        <p><i class="fa-solid fa-location-dot"></i> Envíos a toda la Argentina</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="currentYear"></span> Nakima Mates. Todos los derechos reservados.</p>
+        <p class="footer-credit">Artesanía tradicional argentina</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL DE DETALLE (Ver más) ================= -->
+  <div class="modal-backdrop" id="mateModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Cerrar ventana emergente">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="modal-body">
+        <!-- Columna Izquierda: Foto en Grande -->
+        <div class="modal-image-col">
+          <div class="modal-image-wrapper">
+            <img src="" alt="" id="modalImg" class="modal-img">
+            <span class="modal-tag-badge" id="modalBadge">Artesanal</span>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Breve Descripción, Precios y Botón Pedir -->
+        <div class="modal-info-col">
+          <div class="modal-info-header">
+            <span class="modal-pretitle">Nakima Mates Premium</span>
+            <h3 class="modal-title" id="modalTitle">Nombre del Mate</h3>
+          </div>
+
+          <!-- Precios Mayorista y Minorista en la info de la derecha -->
+          <div class="modal-pricing-box" id="modalPricingBox">
+            <div class="price-cards-grid">
+              <div class="price-card price-minorista">
+                <div class="price-card-header">
+                  <span class="price-type-label"><i class="fa-solid fa-tag"></i> Minorista</span>
+                  <span class="price-tag-badge">Por unidad</span>
+                </div>
+                <div class="price-amount" id="modalPriceMinorista">$0</div>
+                <p class="price-desc">Precio final unitario</p>
+              </div>
+
+              <div class="price-card price-mayorista">
+                <div class="price-card-header">
+                  <span class="price-type-label"><i class="fa-solid fa-boxes-stacked"></i> Mayorista</span>
+                  <span class="price-tag-badge highlight">Por mayor</span>
+                </div>
+                <div class="price-amount highlight" id="modalPriceMayorista">$0</div>
+                <p class="price-desc">Para revendedores y comercios</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-description-box">
+            <h4 class="desc-heading">Descripción del Mate</h4>
+            <p class="modal-description" id="modalDescription">
+              Descripción del mate...
+            </p>
+          </div>
+
+          <div class="modal-specs" id="modalSpecs">
+            <!-- Especificaciones técnicas del mate -->
+          </div>
+
+          <div class="modal-cta-box">
+            <!-- Botón Pedir que lleva a WhatsApp -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-pedir" id="modalPedirBtn">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Pedir por WhatsApp</span>
+            </a>
+            <span class="modal-cta-hint"><i class="fa-solid fa-shield-halved"></i> Te comunicás directo con nuestro equipo para coordinar envío y pago.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/5493794062142?text=¡Hola!%20Tengo%20una%20consulta%20sobre%20los%20mates%20Nakima." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float" 
+     aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-float-tooltip">¡Consultanos por WhatsApp!</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
